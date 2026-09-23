@@ -124,7 +124,7 @@
   }
 
   .hero-content {
-    padding: 0 20px;
+    padding-top: 80px;
   }
 
   .hero h1 {
@@ -152,14 +152,17 @@
 
 /* ========= Celulares pequenos ========= */
 
-@media (max-width: 480px) {
+@media (max-width:768px){
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+    .hero-content{
+        padding:120px 20px 40px;
+    }
 
-  .hero p {
-    font-size: .95rem;
-  }
+    .hero h1{
+        font-size:42px;
+    }
 
+    .hero p{
+        font-size:18px;
+    }
 }
