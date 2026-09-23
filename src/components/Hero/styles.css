@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 
   background: url("/img/dreamhouse.webp") center center / cover no-repeat;
 
@@ -22,17 +22,16 @@
 .hero-content {
   width: 100%;
   max-width: 1200px;
-
   margin: 0 auto;
-  padding: 0 40px;
+
+  padding: 0 50px;
 
   color: #fff;
 }
 
 .hero h1 {
-  font-size: 72px;
+  font-size: 4.5rem;
   line-height: 1.1;
-
   max-width: 650px;
 
   margin-bottom: 25px;
@@ -46,7 +45,7 @@
 .hero p {
   max-width: 600px;
 
-  font-size: 22px;
+  font-size: 1.3rem;
   line-height: 1.6;
 
   margin-bottom: 40px;
@@ -59,22 +58,21 @@
 
 .btn-primary,
 .btn-secondary {
-  padding: 16px 32px;
-
-  border-radius: 10px;
+  padding: 16px 34px;
 
   font-size: 17px;
   font-weight: 600;
 
+  border-radius: 10px;
   cursor: pointer;
 
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .btn-primary {
+  border: none;
   background: #2563eb;
   color: white;
-  border: none;
 }
 
 .btn-primary:hover {
@@ -82,12 +80,86 @@
 }
 
 .btn-secondary {
+  border: 2px solid white;
   background: transparent;
   color: white;
-  border: 2px solid white;
 }
 
 .btn-secondary:hover {
   background: white;
   color: #2563eb;
+}
+
+/* ========= Tablet ========= */
+
+@media (max-width: 992px) {
+
+  .hero-content {
+    padding: 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 3.2rem;
+    max-width: 500px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 450px;
+  }
+
+}
+
+/* ========= Celular ========= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .overlay {
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+    max-width: 100%;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 320px;
+  }
+
+}
+
+/* ========= Celulares pequenos ========= */
+
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: .95rem;
+  }
+
 }
