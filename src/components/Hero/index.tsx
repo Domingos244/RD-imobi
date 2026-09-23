@@ -13,18 +13,17 @@ export default function Hero() {
           </h1>
 
           <p>
-            Casas, apartamentos, terrenos e imóveis comerciais
-            para compra e aluguel.
+           Encontre casas, apartamentos e imóveis comerciais que combinam com o seu estilo de vida e seus objetivos.
           </p>
 
           <div className="hero-buttons">
 
             <button className="btn-primary">
-              Ver imóveis
+              Explorar
             </button>
 
             <button className="btn-secondary">
-              Anunciar imóvel
+              Anuncie aqui
             </button>
 
           </div>

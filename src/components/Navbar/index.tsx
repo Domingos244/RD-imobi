@@ -10,11 +10,11 @@ export default function Navbar() {
     <header className="navbar">
       <div className="container">
         <Link to="/" className="logo">
-          RO<span>Imobiliária</span>
+          RD<span>Imobiliária</span>
         </Link>
 
         <nav className="desktop-menu">
-          <Link to="/">Home</Link>
+          <Link to="/">Página Inicial</Link>
           <Link to="/imoveis">Imóveis</Link>
           <Link to="/sobre">Sobre</Link>
           <Link to="/contato">Contato</Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
             </button>
 
             <Link to="/" onClick={() => setMenuOpen(false)}>
-              Home
+              Página Inicial
             </Link>
 
             <Link to="/imoveis" onClick={() => setMenuOpen(false)}>
