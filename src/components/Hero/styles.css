@@ -23,24 +23,33 @@
   color: #fff;
 }
 
+/* ======== TÍTULO ======== */
+
 .hero h1 {
+  font-family: var(--font-title);
   font-size: 4.5rem;
+  font-weight: 600;
   line-height: 1.1;
   max-width: 650px;
   margin-bottom: 25px;
-  font-weight: 700;
 }
 
 .hero h1 span {
   color: #3b82f6;
 }
 
+/* ======== TEXTO ======== */
+
 .hero p {
+  font-family: var(--font-text);
   max-width: 600px;
   font-size: 1.3rem;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.7;
   margin-bottom: 40px;
 }
+
+/* ======== BOTÕES ======== */
 
 .hero-buttons {
   display: flex;
@@ -49,18 +58,21 @@
 
 .btn-primary,
 .btn-secondary {
+  font-family: var(--font-text);
   padding: 16px 34px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .btn-primary {
   border: none;
   background: #2563eb;
-  color: white;
+  color: #fff;
 }
 
 .btn-primary:hover {
@@ -68,19 +80,20 @@
 }
 
 .btn-secondary {
-  border: 2px solid white;
+  border: 2px solid #fff;
   background: transparent;
-  color: white;
+  color: #fff;
 }
 
 .btn-secondary:hover {
-  background: white;
+  background: #fff;
   color: #2563eb;
 }
 
-/* ========= Tablet ========= */
+/* ========= TABLET ========= */
 
 @media (max-width: 992px) {
+
   .hero-content {
     padding: 0 30px;
   }
@@ -94,11 +107,13 @@
     font-size: 1.1rem;
     max-width: 450px;
   }
+
 }
 
-/* ========= Celular ========= */
+/* ========= CELULAR ========= */
 
 @media (max-width: 768px) {
+
   .hero {
     justify-content: center;
     text-align: center;
@@ -135,11 +150,13 @@
     width: 100%;
     max-width: 320px;
   }
+
 }
 
-/* ========= Celulares pequenos ========= */
+/* ========= CELULARES PEQUENOS ========= */
 
 @media (max-width: 480px) {
+
   .hero-content {
     padding: 110px 20px 30px;
   }
@@ -149,11 +166,12 @@
   }
 
   .hero p {
-    font-size: 0.95rem;
+    font-size: .95rem;
   }
 
   .btn-primary,
   .btn-secondary {
     max-width: 100%;
   }
+
 }

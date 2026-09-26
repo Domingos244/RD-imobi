@@ -38,51 +38,49 @@ export default function Navbar() {
         </button>
       </div>
 
-      {menuOpen && (
-        <>
-          <div
-            className="menu-overlay"
-            onClick={() => setMenuOpen(false)}
-          />
+      {/* Overlay */}
+      <div
+        className={`menu-overlay ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(false)}
+      />
 
-          <div className="mobile-menu">
-            <button
-              className="close-button"
-              onClick={() => setMenuOpen(false)}
-            >
-              <FaTimes />
-            </button>
+      {/* Menu Mobile */}
+      <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+        <button
+          className="close-button"
+          onClick={() => setMenuOpen(false)}
+        >
+          <FaTimes />
+        </button>
 
-            <Link to="/" onClick={() => setMenuOpen(false)}>
-              Página Inicial
-            </Link>
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          Página Inicial
+        </Link>
 
-            <Link to="/imoveis" onClick={() => setMenuOpen(false)}>
-              Imóveis
-            </Link>
+        <Link to="/imoveis" onClick={() => setMenuOpen(false)}>
+          Imóveis
+        </Link>
 
-            <Link to="/sobre" onClick={() => setMenuOpen(false)}>
-              Sobre
-            </Link>
+        <Link to="/sobre" onClick={() => setMenuOpen(false)}>
+          Sobre
+        </Link>
 
-            <Link to="/contato" onClick={() => setMenuOpen(false)}>
-              Contato
-            </Link>
+        <Link to="/contato" onClick={() => setMenuOpen(false)}>
+          Contato
+        </Link>
 
-            <Link to="/login" onClick={() => setMenuOpen(false)}>
-              Entrar
-            </Link>
+        <Link to="/login" onClick={() => setMenuOpen(false)}>
+          Entrar
+        </Link>
 
-            <Link
-              to="/dashboard"
-              className="button"
-              onClick={() => setMenuOpen(false)}
-            >
-              Anunciar
-            </Link>
-          </div>
-        </>
-      )}
+        <Link
+          to="/dashboard"
+          className="button"
+          onClick={() => setMenuOpen(false)}
+        >
+          Anunciar
+        </Link>
+      </div>
     </header>
   );
 }
