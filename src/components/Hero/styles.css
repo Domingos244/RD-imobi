@@ -1,6 +1,6 @@
 .hero {
   width: 100%;
-  min-height: 100vh;
+  height: 720px;
   background: url("/img/dreamhouse.webp") center center / cover no-repeat;
   position: relative;
   display: flex;
@@ -23,7 +23,8 @@
   color: #fff;
 }
 
-/* ======== TÍTULO ======== */
+
+/* ===== TÍTULO ===== */
 
 .hero h1 {
   font-family: var(--font-title);
@@ -38,18 +39,19 @@
   color: #3b82f6;
 }
 
-/* ======== TEXTO ======== */
+
+/* ===== TEXTO ===== */
 
 .hero p {
   font-family: var(--font-text);
   max-width: 600px;
   font-size: 1.3rem;
-  font-weight: 400;
   line-height: 1.7;
   margin-bottom: 40px;
 }
 
-/* ======== BOTÕES ======== */
+
+/* ===== BOTÕES ===== */
 
 .hero-buttons {
   display: flex;
@@ -72,7 +74,7 @@
 .btn-primary {
   border: none;
   background: #2563eb;
-  color: #fff;
+  color: white;
 }
 
 .btn-primary:hover {
@@ -80,17 +82,19 @@
 }
 
 .btn-secondary {
-  border: 2px solid #fff;
+  border: 2px solid white;
   background: transparent;
-  color: #fff;
+  color: white;
 }
 
 .btn-secondary:hover {
-  background: #fff;
+  background: white;
   color: #2563eb;
 }
 
-/* ========= TABLET ========= */
+
+
+/* ===== TABLET ===== */
 
 @media (max-width: 992px) {
 
@@ -100,24 +104,24 @@
 
   .hero h1 {
     font-size: 3.2rem;
-    max-width: 500px;
   }
 
   .hero p {
     font-size: 1.1rem;
-    max-width: 450px;
   }
 
 }
 
-/* ========= CELULAR ========= */
+
+
+/* ===== CELULAR ===== */
 
 @media (max-width: 768px) {
 
   .hero {
+    height: 650px;
     justify-content: center;
     text-align: center;
-    min-height: 100svh;
   }
 
   .overlay {
@@ -125,24 +129,20 @@
   }
 
   .hero-content {
-    padding: 120px 20px 40px;
+    padding: 100px 20px 40px;
   }
 
   .hero h1 {
     font-size: 2.5rem;
-    max-width: 100%;
   }
 
   .hero p {
     font-size: 1rem;
-    max-width: 100%;
-    margin-bottom: 30px;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: center;
-    width: 100%;
   }
 
   .btn-primary,
@@ -153,25 +153,21 @@
 
 }
 
-/* ========= CELULARES PEQUENOS ========= */
+
+/* ===== CELULAR PEQUENO ===== */
 
 @media (max-width: 480px) {
 
+  .hero {
+    height: 600px;
+  }
+
   .hero-content {
-    padding: 110px 20px 30px;
+    padding: 90px 20px 30px;
   }
 
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: .95rem;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    max-width: 100%;
   }
 
 }
