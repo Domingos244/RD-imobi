@@ -1,7 +1,14 @@
 .home {
-  position: relative;
+  width: 100%;
 }
 
-.home .property-search {
-  margin-top: -90px;
+
+.hero-wrapper {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
 }

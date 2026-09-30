@@ -6,8 +6,15 @@ import "./styles.css";
 export default function Home() {
   return (
     <main className="home">
-      <Hero />
-      <PropertySearch />
+
+      <section className="hero-wrapper">
+
+        <Hero />
+
+        <PropertySearch />
+
+      </section>
+
     </main>
   );
 }
