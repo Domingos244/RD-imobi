@@ -1,5 +1,6 @@
 import Hero from "../../components/Hero";
 import PropertySearch from "../../components/PropertySearch";
+import FeaturedProperties from "../../components/FeaturedProperties";
 
 import "./styles.css";
 
@@ -14,6 +15,8 @@ export default function Home() {
         <PropertySearch />
 
       </section>
+
+      <FeaturedProperties/>
 
     </main>
   );

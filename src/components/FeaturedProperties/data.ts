@@ -1,0 +1,40 @@
+export const properties = [
+  {
+    id: 1,
+    title: "Casa Contemporânea de Alto Padrão",
+    location: "Riviera de São Lourenço • Bertioga",
+    image: "/img/property-1.jpg",
+    type: "Venda",
+    price: "R$ 2.450.000",
+    bedrooms: 4,
+    bathrooms: 5,
+    garage: 3,
+    area: "320 m²",
+  },
+
+  {
+    id: 2,
+    title: "Apartamento Vista Mar",
+    location: "Guarujá • São Paulo",
+    image: "/img/property-2.jpg",
+    type: "Venda",
+    price: "R$ 1.180.000",
+    bedrooms: 3,
+    bathrooms: 2,
+    garage: 2,
+    area: "145 m²",
+  },
+
+  {
+    id: 3,
+    title: "Villa de Luxo Moderna",
+    location: "Bertioga • São Paulo",
+    image: "/img/property-3.jpg",
+    type: "Exclusivo",
+    price: "R$ 4.950.000",
+    bedrooms: 5,
+    bathrooms: 6,
+    garage: 4,
+    area: "480 m²",
+  },
+];
