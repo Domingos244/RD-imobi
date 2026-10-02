@@ -1,20 +1,22 @@
 .properties-page {
 
-  padding: 120px 40px 100px;
+  padding:120px 40px 100px;
 
-  background: #F8FAFC;
+  background:#F8FAFC;
 
-  min-height: 100vh;
+  min-height:100vh;
 
 }
 
 
 
+/* CABEÇALHO */
+
 .properties-header {
 
-  max-width: 1200px;
+  max-width:1200px;
 
-  margin: 0 auto 30px;
+  margin:0 auto 50px;
 
 }
 
@@ -22,15 +24,15 @@
 
 .properties-header span {
 
-  color: #2563EB;
+  color:#2563EB;
 
-  font-size: 14px;
+  font-size:14px;
 
-  font-weight: 600;
+  font-weight:600;
 
-  text-transform: uppercase;
+  text-transform:uppercase;
 
-  letter-spacing: 1px;
+  letter-spacing:1px;
 
 }
 
@@ -38,13 +40,13 @@
 
 .properties-header h1 {
 
-  font-size: 48px;
+  font-size:48px;
 
-  line-height: 1.2;
+  line-height:1.2;
 
-  margin: 15px 0;
+  margin:15px 0;
 
-  color: #111827;
+  color:#111827;
 
 }
 
@@ -52,53 +54,77 @@
 
 .properties-header p {
 
-  color: #6B7280;
+  color:#6B7280;
 
-  font-size: 18px;
+  font-size:18px;
 
-  max-width: 600px;
+  max-width:600px;
 
 }
 
 
 
 
+
+/* GRID */
 
 .properties-grid {
 
-  max-width: 1200px;
+  max-width:1200px;
 
-  margin: auto;
+  margin:auto;
 
-  display: grid;
+  display:grid;
 
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns:repeat(3,1fr);
 
-  gap: 30px;
+  gap:30px;
 
 }
 
 
+
+
+
+/* CARD */
 
 .property-card {
 
-  background: white;
+  background:white;
 
-  border-radius: 24px;
+  border-radius:24px;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  box-shadow: 0 20px 50px rgba(0,0,0,.08);
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+  transition:.3s;
 
 }
 
 
 
+.property-card:hover {
+
+  transform:translateY(-8px);
+
+  box-shadow:0 30px 70px rgba(0,0,0,.14);
+
+}
+
+
+
+
+
+/* IMAGEM */
+
 .property-image {
 
-  height: 320px;
+  height:320px;
 
-  position: relative;
+  position:relative;
+
+  overflow:hidden;
 
 }
 
@@ -106,11 +132,21 @@
 
 .property-image img {
 
-  width: 100%;
+  width:100%;
 
-  height: 100%;
+  height:100%;
 
-  object-fit: cover;
+  object-fit:cover;
+
+  transition:.4s;
+
+}
+
+
+
+.property-card:hover .property-image img {
+
+  transform:scale(1.05);
 
 }
 
@@ -118,11 +154,11 @@
 
 .property-image span {
 
-  position: absolute;
+  position:absolute;
 
-  top: 20px;
+  top:20px;
 
-  right: 20px;
+  right:20px;
 
   background:white;
 
@@ -132,13 +168,21 @@
 
   color:#2563EB;
 
+  font-size:13px;
+
+  font-weight:600;
+
 }
 
 
 
+
+
+/* CONTEÚDO */
+
 .property-content {
 
-  padding: 25px;
+  padding:25px;
 
 }
 
@@ -147,6 +191,10 @@
 .property-content h2 {
 
   font-size:22px;
+
+  color:#111827;
+
+  margin-bottom:10px;
 
 }
 
@@ -160,15 +208,25 @@
 
 
 
+
+
 .details {
 
   display:flex;
 
   gap:15px;
 
+  flex-wrap:wrap;
+
   margin:20px 0;
 
+  color:#4B5563;
+
+  font-size:14px;
+
 }
+
+
 
 
 
@@ -180,19 +238,29 @@
 
   font-size:26px;
 
+  margin-bottom:20px;
+
 }
 
 
 
-.property-content button {
 
-  margin-top:20px;
+
+/* BOTÃO DETALHES */
+
+.details-button {
 
   width:100%;
 
   height:50px;
 
-  border:none;
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  
 
   border-radius:12px;
 
@@ -200,9 +268,21 @@
 
   color:white;
 
+  
+
+  text-decoration:none;
+
   font-weight:600;
 
-  cursor:pointer;
+  transition:.3s;
+
+}
+
+
+
+.details-button:hover {
+
+  background:#1D4ED8;
 
 }
 
@@ -210,7 +290,10 @@
 
 
 
+/* TABLET */
+
 @media(max-width:992px){
+
 
   .properties-grid{
 
@@ -218,11 +301,17 @@
 
   }
 
+
 }
 
 
 
+
+
+/* CELULAR */
+
 @media(max-width:768px){
+
 
   .properties-page{
 
@@ -243,5 +332,13 @@
     font-size:36px;
 
   }
+
+
+  .property-image{
+
+    height:280px;
+
+  }
+
 
 }
