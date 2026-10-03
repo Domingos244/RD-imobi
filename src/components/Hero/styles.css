@@ -1,30 +1,25 @@
 .hero {
-
-  min-height: 100svh;
-
+  min-height: 100vh;
+  width: 100%;
   background-image: url("/img/dreamhouse.webp");
-
   background-size: cover;
-
-  background-position: center;
-
+  background-position: center center;
+  background-repeat: no-repeat;
   position: relative;
-
   display: flex;
-
   align-items: center;
-
+  overflow: hidden;
 }
 
 
 
 .overlay {
 
-  position: absolute;
+  position:absolute;
 
-  inset: 0;
+  inset:0;
 
-  background: rgba(0,0,0,.50);
+  background:rgba(0,0,0,.50);
 
 }
 
@@ -32,41 +27,21 @@
 
 .hero-content {
 
-  position: relative;
+  position:relative;
 
-  z-index: 2;
+  z-index:2;
 
-  max-width: 1200px;
+  width:100%;
 
-  width: 100%;
+  max-width:1200px;
 
-  margin: 0 auto;
+  margin:0 auto;
 
-  padding: 0 40px;
+  padding:0 40px;
 
-  color: white;
+  color:white;
 
-  transform: translateY(-40px);
-
-}
-
-
-
-.hero-tag {
-
-  display: inline-block;
-
-  color: #93c5fd;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
-
-  margin-bottom: 20px;
+  transform:translateY(-40px);
 
 }
 
@@ -74,13 +49,13 @@
 
 .hero h1 {
 
-  font-size: 64px;
+  font-size:64px;
 
-  line-height: 1.1;
+  line-height:1.1;
 
-  font-weight: 700;
+  font-weight:700;
 
-  max-width: 600px;
+  max-width:600px;
 
 }
 
@@ -88,90 +63,69 @@
 
 .hero h1 span {
 
-  color: #2563eb;
+  color:#2563eb;
 
 }
 
 
-
-
-/* TABLET */
 
 @media(max-width:768px){
 
 
-  .hero-content {
-
-    padding: 0 20px;
-
-    transform: translateY(-60px);
-
-  }
-
-
-  .hero h1 {
-
-    font-size: 40px;
-
-  }
-
-
-  
-
-}
-
-
-/* CELULAR */
-@media(max-width:768px){
-
   .hero {
 
-    min-height: 120svh;
+    min-height:100svh;
 
-    align-items: flex-start;
+    align-items:center;
+
+    margin-top: -200px;
 
   }
+
 
 
   .hero-content {
 
-    padding: 0 20px;
+    padding:0 25px;
 
-    margin-top: 180px;
-
-    transform: none;
+    transform:translateY(-50px);
 
   }
 
 
+
   .hero h1 {
 
-    font-size: 40px;
+    font-size:40px;
 
   }
 
 }
 
 
-@media(max-width:790px){
+
+@media(max-width:480px){
+
 
   .hero {
 
-    min-height: 120svh;
+    min-height:100svh;
 
   }
+
 
 
   .hero-content {
 
-    margin-top: 150px;
+    transform:translateY(-45px);
 
   }
 
 
+
   .hero h1 {
 
-    font-size: 34px;
+    font-size:34px;
 
   }
 
