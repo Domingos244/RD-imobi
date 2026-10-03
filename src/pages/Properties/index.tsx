@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { properties } from "../../components/FeaturedProperties/data";
-import PropertyFilter from "../../components/PropertyFilter";
+import { useProperties } from "../../context/useProperties";import PropertyFilter from "../../components/PropertyFilter";
 
 import "./styles.css";
 
 
 export default function Properties() {
+
+
+  const { properties } = useProperties();
 
 
   const [filters, setFilters] = useState({
@@ -23,31 +25,30 @@ export default function Properties() {
   const filteredProperties = properties.filter((property) => {
 
 
-    return (
-
+    const matchesLocation =
       property.location
         .toLowerCase()
-        .includes(filters.location.toLowerCase())
+        .includes(filters.location.toLowerCase());
 
 
-      &&
+
+    const matchesType =
+      filters.type === "" ||
+      property.type === filters.type;
 
 
-      (
-        filters.type === "" ||
-        property.type === filters.type
-      )
+
+    const matchesPurpose =
+      filters.purpose === "" ||
+      property.purpose === filters.purpose ||
+      property.type === filters.purpose;
 
 
-      &&
 
-
-      (
-        filters.purpose === "" ||
-        property.purpose === filters.purpose
-      )
-
-
+    return (
+      matchesLocation &&
+      matchesType &&
+      matchesPurpose
     );
 
 
@@ -56,6 +57,7 @@ export default function Properties() {
 
 
   return (
+
 
     <main className="properties-page">
 
@@ -83,6 +85,7 @@ export default function Properties() {
 
 
 
+
       <PropertyFilter
 
         filters={filters}
@@ -95,96 +98,44 @@ export default function Properties() {
 
 
 
+
+
       <section className="properties-grid">
 
 
-        {filteredProperties.map((property) => (
+        {filteredProperties.length > 0 ? (
 
 
-          <article
-
-            className="property-card"
-
-            key={property.id}
-
-          >
+          filteredProperties.map((property) => (
 
 
+            <article
 
-            <div className="property-image">
+              className="property-card"
 
+              key={property.id}
 
-              <img
-
-                src={property.image}
-
-                alt={property.title}
-
-              />
+            >
 
 
-
-              <span>
-
-                {property.type}
-
-              </span>
+              <div className="property-image">
 
 
-            </div>
+                <img
 
+                  src={property.image}
 
+                  alt={property.title}
 
+                />
 
-
-
-            <div className="property-content">
-
-
-
-              <h2>
-
-                {property.title}
-
-              </h2>
-
-
-
-
-
-              <p className="location">
-
-                📍 {property.location}
-
-              </p>
-
-
-
-
-
-
-              <div className="details">
 
 
                 <span>
-                  🛏 {property.bedrooms}
+
+                  {property.type}
+
                 </span>
-
-
-                <span>
-                  🚿 {property.bathrooms}
-                </span>
-
-
-                <span>
-                  🚗 {property.garage}
-                </span>
-
-
-                <span>
-                  📐 {property.area}
-                </span>
-
 
 
               </div>
@@ -193,48 +144,108 @@ export default function Properties() {
 
 
 
-
-              <strong>
-
-                {property.price}
-
-              </strong>
+              <div className="property-content">
 
 
 
+                <h2>
 
+                  {property.title}
 
-
-              <Link
-
-                to={`/imoveis/${property.id}`}
-
-                className="details-button"
-
-              >
-
-                Ver detalhes
-
-              </Link>
+                </h2>
 
 
 
 
 
-            </div>
+                <p className="location">
+
+                  📍 {property.location}
+
+                </p>
 
 
 
-          </article>
+
+
+                <div className="details">
+
+
+                  <span>
+                    🛏 {property.bedrooms}
+                  </span>
+
+
+                  <span>
+                    🚿 {property.bathrooms}
+                  </span>
+
+
+                  <span>
+                    🚗 {property.garage}
+                  </span>
+
+
+                  <span>
+                    📐 {property.area}
+                  </span>
+
+
+                </div>
 
 
 
-        ))}
+
+
+                <strong>
+
+                  {property.price}
+
+                </strong>
+
+
+
+
+
+                <Link
+
+                  to={`/imoveis/${property.id}`}
+
+                  className="details-button"
+
+                >
+
+                  Ver detalhes →
+
+                </Link>
+
+
+
+              </div>
+
+
+            </article>
+
+
+          ))
+
+
+
+        ) : (
+
+
+          <p className="no-results">
+
+            Nenhum imóvel encontrado.
+
+          </p>
+
+
+        )}
 
 
 
       </section>
-
 
 
     </main>

@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 
-import { properties } from "./data";
-
+import { useProperties } from "../../context/useProperties";
 import "./styles.css";
 
 
 export default function FeaturedProperties() {
+
+
+  const { properties } = useProperties();
+
+
 
   return (
 
@@ -31,7 +35,6 @@ export default function FeaturedProperties() {
             Encontre propriedades exclusivas escolhidas para você.
           </p>
 
-
         </div>
 
 
@@ -43,7 +46,6 @@ export default function FeaturedProperties() {
         </Link>
 
 
-
       </div>
 
 
@@ -53,7 +55,7 @@ export default function FeaturedProperties() {
       <div className="property-grid">
 
 
-        {properties.map((property) => (
+        {properties.slice(0, 3).map((property) => (
 
 
           <article
@@ -140,7 +142,6 @@ export default function FeaturedProperties() {
                 <span>
                   📐 {property.area}
                 </span>
-
 
 
               </div>

@@ -9,14 +9,22 @@ export default function Hero() {
       <div className="hero-content">
 
         <span className="hero-tag">
-        
+          Encontre seu próximo imóvel
         </span>
+
 
         <h1>
           Encontre o <span>imóvel</span>
           <br />
           ideal para você
         </h1>
+
+
+        <p>
+          Casas, apartamentos e terrenos selecionados
+          para você encontrar o lugar perfeito.
+        </p>
+
 
       </div>
 

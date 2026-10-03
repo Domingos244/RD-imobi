@@ -1,0 +1,282 @@
+.new-property-page {
+  min-height: 100vh;
+  background: #F8FAFC;
+  padding: 120px 40px 80px;
+}
+
+
+.new-property-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+
+.page-header {
+  margin-bottom: 40px;
+}
+
+
+.page-header span {
+  color: #2563EB;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+.page-header h1 {
+  font-size: 42px;
+  color: #111827;
+  margin: 12px 0;
+}
+
+
+
+.page-header p {
+  color: #6B7280;
+  font-size: 17px;
+}
+
+
+
+/* FORM */
+
+.property-form {
+
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.08);
+
+}
+
+
+
+.form-group {
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 25px;
+
+}
+
+
+
+.form-group label {
+
+  color: #111827;
+  font-weight: 600;
+  font-size: 14px;
+
+}
+
+
+
+
+input,
+select,
+textarea {
+
+  width: 100%;
+  padding: 0 15px;
+  height: 50px;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  transition: .3s;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+  border-color: #2563EB;
+
+}
+
+
+
+textarea {
+
+  min-height: 140px;
+  padding: 15px;
+  resize: vertical;
+
+}
+
+
+
+
+.form-row {
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+
+}
+
+
+
+
+/* IMAGENS */
+
+
+.image-preview {
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+
+}
+
+
+
+.image-preview img {
+
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 15px;
+
+}
+
+
+
+
+.image-preview.cover {
+
+  grid-template-columns: 1fr;
+  max-width: 400px;
+
+}
+
+
+
+.image-preview.cover img {
+
+  height: 250px;
+
+}
+
+
+
+
+input[type="file"] {
+
+  height: auto;
+  padding: 12px;
+  background: #F8FAFC;
+  cursor: pointer;
+
+}
+
+
+
+
+/* BOTÃO */
+
+
+.property-form button {
+
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 12px;
+  background: #2563EB;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+
+}
+
+
+
+.property-form button:hover {
+
+  background: #1D4ED8;
+
+}
+
+
+
+
+
+/* RESPONSIVO */
+
+
+@media(max-width:768px){
+
+
+  .new-property-page {
+
+    padding: 90px 20px;
+
+  }
+
+
+
+  .property-form {
+
+    padding: 25px;
+
+  }
+
+
+
+  .page-header h1 {
+
+    font-size: 32px;
+
+  }
+
+
+
+  .form-row {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .image-preview {
+
+    grid-template-columns: repeat(2,1fr);
+
+  }
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+  .image-preview {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .property-form {
+
+    padding: 20px;
+
+  }
+
+
+}

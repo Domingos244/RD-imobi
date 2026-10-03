@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
-
+import NewProperty from "../pages/Dashboard/NewProperty";
 import Home from "../pages/Home";
 import Properties from "../pages/Properties";
 import PropertyDetails from "../pages/PropertyDetails";
@@ -20,6 +20,7 @@ export default function AppRoutes() {
           <Route path="/imoveis/:id" element={<PropertyDetails />} />
           <Route path="/sobre" element={<About />} />
           <Route path="/contato" element={<Contact />} />
+          <Route path="/dashboard/imoveis/novo"element={<NewProperty />}/>
         </Route>
 
         <Route path="/login" element={<Login />} />

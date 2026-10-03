@@ -1,21 +1,30 @@
 import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
-import type { ChangeEvent } from "react";
+import type { ChangeEvent, Dispatch, SetStateAction } from "react";
 
 import "./styles.css";
 
 
-interface Filters {
+
+export interface Filters {
+
   location: string;
+
   type: string;
+
   purpose: string;
+
 }
+
 
 
 interface PropertyFilterProps {
 
+
   filters: Filters;
 
-  setFilters: React.Dispatch<React.SetStateAction<Filters>>;
+
+  setFilters: Dispatch<SetStateAction<Filters>>;
+
 
 }
 
@@ -32,7 +41,9 @@ export default function PropertyFilter({
 
 
   function handleChange(
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+
+    event: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+
   ) {
 
 
@@ -40,7 +51,7 @@ export default function PropertyFilter({
 
       ...filters,
 
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value
 
     });
 
@@ -52,10 +63,12 @@ export default function PropertyFilter({
 
   return (
 
+
     <section className="property-filter">
 
 
       <form className="filter-form">
+
 
 
         <div className="filter-field">
@@ -70,15 +83,16 @@ export default function PropertyFilter({
           </label>
 
 
+
           <input
 
             name="location"
 
-            placeholder="Cidade ou bairro"
-
             value={filters.location}
 
             onChange={handleChange}
+
+            placeholder="Cidade ou bairro"
 
           />
 
@@ -87,12 +101,18 @@ export default function PropertyFilter({
 
 
 
+
+
+
         <div className="filter-field">
 
 
           <label>
+
             Tipo
+
           </label>
+
 
 
           <select
@@ -105,21 +125,34 @@ export default function PropertyFilter({
 
           >
 
+
             <option value="">
+
               Todos
+
             </option>
+
 
             <option value="Casa">
+
               Casa
+
             </option>
+
 
             <option value="Apartamento">
+
               Apartamento
+
             </option>
 
+
             <option value="Terreno">
+
               Terreno
+
             </option>
+
 
 
           </select>
@@ -129,12 +162,19 @@ export default function PropertyFilter({
 
 
 
+
+
+
+
         <div className="filter-field">
 
 
           <label>
+
             Finalidade
+
           </label>
+
 
 
           <select
@@ -147,39 +187,60 @@ export default function PropertyFilter({
 
           >
 
+
             <option value="">
+
               Todos
+
             </option>
+
 
             <option value="Comprar">
+
               Comprar
+
             </option>
 
+
             <option value="Alugar">
+
               Alugar
+
             </option>
 
 
           </select>
 
 
+
         </div>
+
+
+
+
 
 
 
         <button type="button">
 
+
           <FaSearch />
+
 
           Buscar
 
+
         </button>
+
+
 
 
       </form>
 
 
+
     </section>
+
 
   );
 

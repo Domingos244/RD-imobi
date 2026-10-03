@@ -1,25 +1,46 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+
 import "./styles.css";
+
 
 export default function Navbar() {
 
+
   const [menuOpen, setMenuOpen] = useState(false);
 
+
   const location = useLocation();
+
 
   const isHome = location.pathname === "/";
 
 
+
+  function closeMenu() {
+
+    setMenuOpen(false);
+
+  }
+
+
+
   return (
 
-    <header className={`navbar ${isHome ? "navbar-home" : "navbar-page"}`}>
+    <header
+      className={`navbar ${isHome ? "navbar-home" : "navbar-page"}`}
+    >
+
 
       <div className="container">
 
 
-        <Link to="/" className="logo">
+
+        <Link
+          to="/"
+          className="logo"
+        >
 
           RD<span>Imobiliária</span>
 
@@ -27,50 +48,80 @@ export default function Navbar() {
 
 
 
+
+
         <nav className="desktop-menu">
+
 
           <Link to="/">
             Página Inicial
           </Link>
 
+
           <Link to="/imoveis">
             Imóveis
           </Link>
+
 
           <Link to="/sobre">
             Sobre
           </Link>
 
+
           <Link to="/contato">
             Contato
           </Link>
+
 
         </nav>
 
 
 
+
+
+
         <div className="actions desktop-menu">
 
-          <Link to="/login" className="login">
+
+          <Link
+            to="/login"
+            className="login"
+          >
 
             Entrar
 
           </Link>
 
 
-          <Link to="/dashboard" className="button">
+
+
+
+          <Link
+            to="/dashboard"
+            className="button"
+          >
 
             Anunciar
 
           </Link>
 
+
         </div>
 
 
 
+
+
+
+
         <button
+
           className="menu-button"
+
           onClick={() => setMenuOpen(true)}
+
+          aria-label="Abrir menu"
+
         >
 
           <FaBars />
@@ -78,21 +129,51 @@ export default function Navbar() {
         </button>
 
 
+
       </div>
 
 
+
+
+
+
+
       <div
-        className={`menu-overlay ${menuOpen ? "active" : ""}`}
-        onClick={() => setMenuOpen(false)}
+
+        className={`menu-overlay ${
+          menuOpen ? "active" : ""
+        }`}
+
+        onClick={closeMenu}
+
       />
 
 
 
-      <div className={`mobile-menu ${menuOpen ? "active" : ""}`}>
+
+
+
+
+
+      <aside
+
+        className={`mobile-menu ${
+          menuOpen ? "active" : ""
+        }`}
+
+      >
+
+
+
 
         <button
+
           className="close-button"
-          onClick={() => setMenuOpen(false)}
+
+          onClick={closeMenu}
+
+          aria-label="Fechar menu"
+
         >
 
           <FaTimes />
@@ -100,35 +181,84 @@ export default function Navbar() {
         </button>
 
 
-        <Link to="/" onClick={() => setMenuOpen(false)}>
-          Página Inicial
-        </Link>
 
 
-        <Link to="/imoveis" onClick={() => setMenuOpen(false)}>
-          Imóveis
-        </Link>
-
-
-        <Link to="/sobre" onClick={() => setMenuOpen(false)}>
-          Sobre
-        </Link>
-
-
-        <Link to="/contato" onClick={() => setMenuOpen(false)}>
-          Contato
-        </Link>
-
-
-        <Link to="/login" onClick={() => setMenuOpen(false)}>
-          Entrar
-        </Link>
 
 
         <Link
+          to="/"
+          onClick={closeMenu}
+        >
+
+          Página Inicial
+
+        </Link>
+
+
+
+
+
+        <Link
+          to="/imoveis"
+          onClick={closeMenu}
+        >
+
+          Imóveis
+
+        </Link>
+
+
+
+
+
+        <Link
+          to="/sobre"
+          onClick={closeMenu}
+        >
+
+          Sobre
+
+        </Link>
+
+
+
+
+
+        <Link
+          to="/contato"
+          onClick={closeMenu}
+        >
+
+          Contato
+
+        </Link>
+
+
+
+
+
+        <Link
+          to="/login"
+          onClick={closeMenu}
+        >
+
+          Entrar
+
+        </Link>
+
+
+
+
+
+
+        <Link
+
           to="/dashboard"
+
           className="button"
-          onClick={() => setMenuOpen(false)}
+
+          onClick={closeMenu}
+
         >
 
           Anunciar
@@ -136,7 +266,11 @@ export default function Navbar() {
         </Link>
 
 
-      </div>
+
+
+
+      </aside>
+
 
 
     </header>

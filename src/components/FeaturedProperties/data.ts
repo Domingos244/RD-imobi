@@ -17,9 +17,11 @@ export const properties = [
       "/img/property-details/house-5.webp",
     ],
 
-    type: "Venda",
+
+    type: "Casa",
 
     purpose: "Comprar",
+
 
     price: "R$ 2.450.000",
 
@@ -31,8 +33,10 @@ export const properties = [
 
     area: "320 m²",
 
+
     description:
       "Casa moderna de alto padrão com ambientes amplos, acabamento sofisticado e excelente localização em uma das regiões mais valorizadas do litoral paulista.",
+
 
     features: [
       "Piscina",
@@ -46,6 +50,7 @@ export const properties = [
   },
 
 
+
   {
     id: 2,
 
@@ -55,6 +60,7 @@ export const properties = [
 
     image: "/img/property-2.jpg",
 
+
     gallery: [
       "/img/property-2.jpg",
       "/img/property-details/apartment-2.webp",
@@ -63,11 +69,14 @@ export const properties = [
       "/img/property-details/apartment-5.webp",
     ],
 
-    type: "Venda",
+
+    type: "Apartamento",
 
     purpose: "Comprar",
 
+
     price: "R$ 1.180.000",
+
 
     bedrooms: 3,
 
@@ -77,8 +86,10 @@ export const properties = [
 
     area: "145 m²",
 
+
     description:
       "Apartamento sofisticado com vista para o mar, ambientes planejados e localização privilegiada próximo à praia.",
+
 
     features: [
       "Vista para o mar",
@@ -91,6 +102,7 @@ export const properties = [
   },
 
 
+
   {
     id: 3,
 
@@ -100,6 +112,7 @@ export const properties = [
 
     image: "/img/property-3.jpg",
 
+
     gallery: [
       "/img/property-3.jpg",
       "/img/property-details/villa-2.webp",
@@ -108,11 +121,14 @@ export const properties = [
       "/img/property-details/villa-5.webp",
     ],
 
-    type: "Exclusivo",
+
+    type: "Casa",
 
     purpose: "Comprar",
 
+
     price: "R$ 4.950.000",
+
 
     bedrooms: 5,
 
@@ -122,8 +138,10 @@ export const properties = [
 
     area: "480 m²",
 
+
     description:
       "Villa exclusiva com arquitetura moderna, espaços integrados e estrutura completa para conforto e privacidade.",
+
 
     features: [
       "Piscina aquecida",

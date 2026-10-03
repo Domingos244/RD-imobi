@@ -7,7 +7,6 @@
   position: absolute;
 
   top: 0;
-
   left: 0;
 
   width: 100%;
@@ -23,7 +22,8 @@
 }
 
 
-/* Navbar páginas internas */
+
+/* páginas internas */
 
 .navbar-page {
 
@@ -37,9 +37,12 @@
 
 
 
+
+
 /* ===========================
    CONTAINER
 =========================== */
+
 
 .container {
 
@@ -53,17 +56,20 @@
 
   display: flex;
 
-  justify-content: space-between;
-
   align-items: center;
 
+  justify-content: space-between;
+
 }
+
+
 
 
 
 /* ===========================
    LOGO
 =========================== */
+
 
 .logo {
 
@@ -73,65 +79,70 @@
 
   font-weight: 700;
 
-  letter-spacing: .5px;
-
   text-decoration: none;
 
-  color: #fff;
+  letter-spacing: .5px;
+
+  color: white;
 
 }
+
 
 
 .logo span {
 
-  color: #3B82F6;
+  color:#2563EB;
 
 }
+
 
 
 .navbar-page .logo {
 
-  color: #111827;
+  color:#111827;
 
 }
+
+
 
 
 
 /* ===========================
-   MENU DESKTOP
+   MENU
 =========================== */
+
 
 .desktop-menu {
 
-  display: flex;
+  display:flex;
 
-  gap: 35px;
+  align-items:center;
+
+  gap:35px;
 
 }
+
 
 
 .desktop-menu a {
 
-  font-family: var(--font-text);
+  color:white;
 
-  color: #fff;
+  text-decoration:none;
 
-  text-decoration: none;
+  font-size:16px;
 
-  font-size: 16px;
+  font-weight:500;
 
-  font-weight: 500;
-
-  letter-spacing: .03em;
-
-  transition: .3s;
+  transition:.3s;
 
 }
 
 
+
 .desktop-menu a:hover {
 
-  color: #3B82F6;
+  color:#2563EB;
 
 }
 
@@ -139,9 +150,11 @@
 
 .navbar-page .desktop-menu a {
 
-  color: #111827;
+  color:#111827;
 
 }
+
+
 
 
 
@@ -149,33 +162,34 @@
    AÇÕES
 =========================== */
 
+
 .actions {
 
-  display: flex;
+  display:flex;
 
-  align-items: center;
+  align-items:center;
 
-  gap: 15px;
+  gap:20px;
 
 }
+
 
 
 .login {
 
-  font-family: var(--font-text);
+  color:white;
 
-  font-weight: 500;
+  text-decoration:none;
 
-  color: #fff;
-
-  text-decoration: none;
+  font-weight:500;
 
 }
 
 
+
 .navbar-page .login {
 
-  color: #111827;
+  color:#111827;
 
 }
 
@@ -183,121 +197,33 @@
 
 .button {
 
-  background: #2563EB;
+  background:#2563EB;
 
-  color: #fff;
+  color:white !important;
 
-  text-decoration: none;
+  padding:12px 25px;
 
-  padding: 12px 25px;
+  border-radius:10px;
 
-  border-radius: 8px;
+  text-decoration:none;
 
-  font-family: var(--font-text);
+  font-size:14px;
 
-  font-size: 15px;
+  font-weight:600;
 
-  font-weight: 600;
-
-  letter-spacing: .08em;
-
-  text-transform: uppercase;
-
-  transition: .3s;
+  transition:.3s;
 
 }
+
 
 
 .button:hover {
 
-  background: #1D4ED8;
+  background:#1D4ED8;
 
 }
 
 
-
-/* ===========================
-   BOTÃO HAMBÚRGUER
-=========================== */
-
-.menu-button {
-
-  display: none;
-
-  width: 46px;
-
-  height: 46px;
-
-  border: none;
-
-  border-radius: 12px;
-
-  background: rgba(255,255,255,.15);
-
-  backdrop-filter: blur(12px);
-
-  color: #fff;
-
-  font-size: 22px;
-
-  cursor: pointer;
-
-  align-items: center;
-
-  justify-content: center;
-
-  transition: .3s;
-
-}
-
-
-.menu-button:hover {
-
-  background: rgba(255,255,255,.25);
-
-}
-
-
-.navbar-page .menu-button {
-
-  background: #F3F4F6;
-
-  color: #111827;
-
-}
-
-
-
-/* ===========================
-   OVERLAY
-=========================== */
-
-.menu-overlay {
-
-  position: fixed;
-
-  inset: 0;
-
-  background: rgba(0,0,0,.45);
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  transition: .35s;
-
-  z-index: 998;
-
-}
-
-
-.menu-overlay.active {
-
-  opacity: 1;
-
-  visibility: visible;
-
-}
 
 
 
@@ -305,81 +231,142 @@
    MENU MOBILE
 =========================== */
 
-.mobile-menu {
 
-  position: fixed;
+.menu-button {
 
-  top: 0;
+  display:none;
 
-  right: 0;
+  width:46px;
 
-  width: 300px;
+  height:46px;
 
-  max-width: 85%;
+  border:none;
 
-  height: 100vh;
+  border-radius:12px;
 
-  background: rgba(255,255,255,.98);
+  background:rgba(255,255,255,.15);
 
-  backdrop-filter: blur(15px);
+  backdrop-filter:blur(10px);
 
-  transform: translateX(100%);
+  color:white;
 
-  transition: transform .35s ease;
+  font-size:22px;
 
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 22px;
-
-  padding: 30px;
-
-  z-index: 999;
-
-  box-shadow: -10px 0 25px rgba(0,0,0,.18);
+  cursor:pointer;
 
 }
+
+
+
+.navbar-page .menu-button {
+
+  background:#F3F4F6;
+
+  color:#111827;
+
+}
+
+
+
+
+
+.menu-overlay {
+
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(0,0,0,.45);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  transition:.3s;
+
+  z-index:998;
+
+}
+
+
+
+.menu-overlay.active {
+
+  opacity:1;
+
+  visibility:visible;
+
+}
+
+
+
+
+
+.mobile-menu {
+
+  position:fixed;
+
+  top:0;
+
+  right:0;
+
+  width:300px;
+
+  max-width:85%;
+
+  height:100vh;
+
+  background:white;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:25px;
+
+  padding:30px;
+
+  transform:translateX(100%);
+
+  transition:.35s;
+
+  z-index:999;
+
+  box-shadow:-10px 0 30px rgba(0,0,0,.15);
+
+}
+
 
 
 .mobile-menu.active {
 
-  transform: translateX(0);
+  transform:translateX(0);
 
 }
+
 
 
 .mobile-menu a {
 
-  color: #222;
+  color:#111827;
 
-  text-decoration: none;
+  text-decoration:none;
 
-  font-size: 18px;
+  font-size:18px;
 
-  font-family: var(--font-text);
+  font-weight:500;
 
-  font-weight: 500;
-
-  transition: .25s;
+  transition:.3s;
 
 }
+
 
 
 .mobile-menu a:hover {
 
-  color: #2563EB;
+  color:#2563EB;
 
-  padding-left: 10px;
-
-}
-
-
-.mobile-menu .button {
-
-  margin-top: 10px;
-
-  text-align: center;
+  padding-left:8px;
 
 }
 
@@ -387,17 +374,19 @@
 
 .close-button {
 
-  align-self: flex-end;
+  align-self:flex-end;
 
-  background: transparent;
+  background:none;
 
-  border: none;
+  border:none;
 
-  font-size: 28px;
+  font-size:28px;
 
-  cursor: pointer;
+  cursor:pointer;
 
 }
+
+
 
 
 
@@ -405,42 +394,51 @@
    RESPONSIVO
 =========================== */
 
-@media (max-width:768px){
+
+@media(max-width:768px){
 
 
   .navbar {
 
-    padding: 18px 0;
+    padding:18px 0;
 
   }
+
 
 
   .container {
 
-    padding: 0 18px;
+    padding:0 20px;
 
   }
+
 
 
   .desktop-menu,
 
   .actions {
 
-    display: none;
+    display:none;
 
   }
+
 
 
   .menu-button {
 
-    display: flex;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
   }
 
 
+
   .logo {
 
-    font-size: 26px;
+    font-size:26px;
 
   }
 
