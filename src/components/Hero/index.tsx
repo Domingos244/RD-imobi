@@ -12,17 +12,21 @@ export default function Hero() {
           Encontre seu próximo imóvel
         </span>
 
-
         <h1>
-          Encontre o <span>imóvel</span>
+          O imóvel ideal
           <br />
-          ideal para você
+          para a sua nova história
         </h1>
 
+        <p className="hero-description">
+          Casas, apartamentos e terrenos selecionados para você comprar ou alugar com segurança.
+        </p>
 
+       
 
-      </div>
+        </div>
 
+  
     </section>
   );
 }

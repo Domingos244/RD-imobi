@@ -1,33 +1,29 @@
 .property-search {
 
-  width:100%;
-
   position:absolute;
 
-  bottom:-140px;
+  top:50%;
 
-  left:0;
+  right:60px;
 
-  z-index:20;
+  transform:translateY(-50%);
 
-  padding:0 60px;
+  z-index:10;
 
 }
 
 
 .search-container {
 
-  width:380px;
-
-  margin-left:auto;
+  width:360px;
 
   background:white;
 
-  padding:32px;
+  padding:30px;
 
   border-radius:22px;
 
-  box-shadow:0 30px 70px rgba(0,0,0,.15);
+  box-shadow:0 25px 60px rgba(0,0,0,.18);
 
 }
 
@@ -52,10 +48,23 @@
 }
 
 
+.field label {
+
+  margin-bottom:8px;
+
+  font-size:14px;
+
+  font-weight:600;
+
+  color:#64748b;
+
+}
+
+
 .field input,
 .field select {
 
-  height:55px;
+  height:54px;
 
   border:1px solid #e5e7eb;
 
@@ -66,10 +75,9 @@
 }
 
 
-
 .search-button {
 
-  height:55px;
+  height:54px;
 
   border:none;
 
@@ -84,6 +92,23 @@
 }
 
 
+@media(max-width:992px){
+
+  .property-search {
+
+    right:30px;
+
+  }
+
+
+  .search-container {
+
+    width:330px;
+
+  }
+
+}
+
 
 @media(max-width:768px){
 
@@ -91,15 +116,15 @@
 
     position:relative;
 
-    bottom:auto;
+    top:auto;
 
-    left:auto;
+    right:auto;
+
+    transform:none;
+
+    margin-top:-50px;
 
     padding:0 20px;
-
-    margin-top: -370px;
-
-    z-index:20;
 
   }
 
@@ -107,8 +132,6 @@
   .search-container {
 
     width:100%;
-
-    padding:20px;
 
   }
 
