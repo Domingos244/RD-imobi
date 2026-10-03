@@ -24,7 +24,7 @@
 
   width: 380px;
 
-  background: #fff;
+  background: white;
 
   padding: 32px;
 
@@ -99,23 +99,6 @@
 
   padding: 0 16px;
 
-  font-size: 15px;
-
-  color: #374151;
-
-}
-
-
-
-.field input:focus,
-.field select:focus {
-
-  outline: none;
-
-  border-color: #2563eb;
-
-  box-shadow: 0 0 0 4px rgba(37,99,235,.10);
-
 }
 
 
@@ -136,19 +119,7 @@
 
   font-weight: 600;
 
-  font-size: 15px;
-
   cursor: pointer;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 10px;
-
-  transition: .3s;
 
 }
 
@@ -164,7 +135,8 @@
 
 /* TABLET */
 
-@media (max-width: 992px) {
+@media(max-width:992px){
+
 
   .property-search {
 
@@ -185,21 +157,22 @@
 
 /* CELULAR */
 
-@media (max-width: 75px) {
+@media(max-width:768px){
+
 
   .property-search {
 
-    position: absolute;
+    left: 20px;
 
-    right: 15px;
+    right: 20px;
 
-    left: 10px;
+    bottom: 25px;
 
-    top: 65%;
+    top: auto;
 
-    transform: translateY(-50%);
+    transform: none;
 
-    z-index: 20;
+    width: auto;
 
   }
 
@@ -208,54 +181,44 @@
 
     width: 100%;
 
-    padding: 22px;
+    padding: 20px;
 
-  }
-
-
-  .hero-content {
-
-    text-align: center;
-
-    padding: 80px 24px 0;
-
-  }
-
-
-  .hero h1 {
-
-    font-size: 38px;
-
-    max-width: 100%;
+    border-radius: 18px;
 
   }
 
 }
 
 
+
 /* CELULARES PEQUENOS */
 
-@media (max-width: 480px) {
+@media(max-width:768px){
 
   .property-search {
 
-    bottom: 20px;
+    position: absolute;
+
+    left: 20px;
+
+    right: 20px;
+
+    top: 55%;
+
+    bottom: auto;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
 
   }
 
 
   .search-container {
 
+    width: 100%;
+
     padding: 20px;
-
-  }
-
-
-  .field input,
-  .field select,
-  .search-button {
-
-    height: 50px;
 
   }
 

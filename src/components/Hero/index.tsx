@@ -20,11 +20,6 @@ export default function Hero() {
         </h1>
 
 
-        <p>
-          Casas, apartamentos e terrenos selecionados
-          para você encontrar o lugar perfeito.
-        </p>
-
 
       </div>
 
